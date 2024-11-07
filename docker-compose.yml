@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - VITE_OPENAI_API_KEY=${VITE_OPENAI_API_KEY}
+      - VITE_GITHUB_TOKEN=${VITE_GITHUB_TOKEN}
+      - VITE_AZURE_PAT=${VITE_AZURE_PAT}
+      - VITE_AZURE_ORG=${VITE_AZURE_ORG}
+      - VITE_JENKINS_URL=${VITE_JENKINS_URL}
+      - VITE_JENKINS_USER=${VITE_JENKINS_USER}
+      - VITE_JENKINS_TOKEN=${VITE_JENKINS_TOKEN}
